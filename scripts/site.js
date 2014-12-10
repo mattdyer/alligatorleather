@@ -9,17 +9,24 @@
 			var colorName = img.attr('alt');
 			if(colorName.length > 0){
 				console.log(colorName);
-				var span = $('<span class="imageLabel">' + colorName + '</span>');
-				img.parent().append(span);
-				/*options.each(function(){
-					var option = $(this);
-
-					if(option.text() == colorName){
-
-					}
-
-				});*/
+				var labelContainer = $('<div class="imageLabel">' + colorName + '</div>');
+				img.parent().append(labelContainer);
 			}
+		});
+
+		$('.product-image-thumbs a').click(function(){
+			var img = $('img',this);
+
+			var colorName = img.attr('alt');
+
+			options.each(function(){
+				var option = $(this);
+
+				if($.trim(option.text()) == $.trim(colorName)){
+					colorDropdown.val(option.attr('value'));
+				}
+
+			});
 		});
 	});
 })(jQuery)
