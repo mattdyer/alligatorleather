@@ -1,0 +1,13 @@
+.imageLabel{
+	font-size: 10px;
+}
+
+.thumb-link img{
+	margin: 0 auto;
+}
+
+.no-touch .product-image-thumbs a{
+	border-color: #DDD;
+	margin: 3px;
+	padding: 3px;
+}
