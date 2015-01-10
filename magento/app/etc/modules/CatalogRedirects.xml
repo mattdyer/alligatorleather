@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <CatalogRedirects_Catalog>
+      <codePool>local</codePool>
+      <active>true</active>
+    </CatalogRedirects_Catalog>
+  </modules>
+</config>

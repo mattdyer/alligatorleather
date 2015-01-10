@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+  <global>
+    <models>
+        <catalogredirects>
+             <class>CatalogRedirects_Catalog_Model_Observer</class>
+        </catalogredirects>
+    </models>
+    <events>
+      <catalog_controller_category_init_after>
+        <observers>
+          <catalog>
+            <type>singleton</type>
+            <class>CatalogRedirects_Catalog_Model_Observer</class>
+            <method>redirect_for_single_product</method>
+          </catalog>
+        </observers>
+      </catalog_controller_category_init_after>
+    </events>
+  </global>
+</config>
