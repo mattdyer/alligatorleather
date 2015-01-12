@@ -49,15 +49,17 @@
 					thumb.attr('alt',colorName);
 					thumb.removeAttr('height');
 
-					//var imageLabel = nextImageThumbItem.find('.imageLabel');
-					//imageLabel.text(colorName);	
-
-					var labelContainer = $('<div class="imageLabel">' + colorName + '</div>');
-					thumb.parent().append(labelContainer);
-
+					var imageLabel = nextImageThumbItem.find('.imageLabel');
+					
+					if(imageLabel.length > 0){
+						imageLabel.text(colorName);	
+					}else{
+						var labelContainer = $('<div class="imageLabel">' + colorName + '</div>');
+						thumb.parent().append(labelContainer);
+					}
+					
 					imageThumbContainer.append(nextImageThumbItem);
-
-
+					
 					var nextImage = largeImage.clone();
 
 					nextImage.removeAttr('id');
@@ -89,14 +91,14 @@
 			});
 		}
 
-		// $('.product-image-thumbs img').each(function(){
-		// 	var img = $(this);
-		// 	var colorName = img.attr('alt');
-		// 	if(colorName.length > 0){
-		// 		var labelContainer = $('<div class="imageLabel">' + colorName + '</div>');
-		// 		img.parent().append(labelContainer);
-		// 	}
-		// });
+		$('.product-image-thumbs img').each(function(){
+			var img = $(this);
+			var colorName = img.attr('alt');
+			if(colorName.length > 0){
+				var labelContainer = $('<div class="imageLabel">' + colorName + '</div>');
+				img.parent().append(labelContainer);
+			}
+		});
 
 		$('.product-image-thumbs').on('click','a',function(){
 			var img = $('img',this);
