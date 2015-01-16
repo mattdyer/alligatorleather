@@ -2,6 +2,10 @@
 	"Black, Polished Safari":{
 		"filename":"black_safari.jpg"
 	},
+	"Black, Distressed +$25.00":{
+		"filename":"distressed_black.jpg",
+		"displayname":"Black, Distressed"
+	},
 	"Black, Safari":{
 		"filename":"PBS.jpg"
 	},

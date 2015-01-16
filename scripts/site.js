@@ -28,7 +28,7 @@
 			var largeImageContainer = $('.product-image-gallery');
 			var largeImage = largeImageContainer.find('img').first();
 
-			largeImageContainer.empty();
+			//largeImageContainer.empty();
 			imageThumbContainer.empty();
 
 			options.each(function(){
@@ -36,9 +36,17 @@
 				var colorName = $.trim(option.text());
 
 				if(imageMap[colorName]){
+					var color = imageMap[colorName];
+					if(color.displayname){
+						colorName = color.displayname;
+					}
 					var nextImageThumbItem = imageThumbItem.clone();
 
-					var imageSrc = '/images/color-images/' + imageMap[colorName].filename;
+					var imageSrc = '/images/color-images/' + color.filename;
+
+					var thumbLink = nextImageThumbItem.find('.thumb-link');
+
+					thumbLink.attr('title',colorName);
 
 					var thumb = nextImageThumbItem.find('img');
 					thumb.attr('src',imageSrc);
@@ -75,12 +83,14 @@
 				}
 			});
 
-			$('.product-image-thumbs img').first().click();
+			//$('.product-image-thumbs img').first().click();
 		}
 
 		//var colorDropdown = $('#select_22');
-		
+
 		var colorDropdown = getColorDropdown();
+		
+
 		if(colorDropdown){
 			var options = $('option',colorDropdown);
 			var imageMap;
@@ -88,6 +98,21 @@
 			$.get('/images/color-images/map.json',function(data){
 				imageMap = data;
 				makeImagesFromOptions(options);
+			});
+
+			$('.product-image-thumbs').on('click','a',function(){
+				var img = $('img',this);
+
+				var colorName = img.attr('alt');
+
+				options.each(function(){
+					var option = $(this);
+
+					if($.trim(option.text()) == $.trim(colorName)){
+						colorDropdown.val(option.attr('value'));
+					}
+
+				});
 			});
 		}
 
@@ -100,20 +125,7 @@
 			}
 		});
 
-		$('.product-image-thumbs').on('click','a',function(){
-			var img = $('img',this);
-
-			var colorName = img.attr('alt');
-
-			options.each(function(){
-				var option = $(this);
-
-				if($.trim(option.text()) == $.trim(colorName)){
-					colorDropdown.val(option.attr('value'));
-				}
-
-			});
-		});
+		
 
 
 
