@@ -28,7 +28,6 @@
 			var largeImageContainer = $('.product-image-gallery');
 			var largeImage = largeImageContainer.find('img').first();
 
-			//largeImageContainer.empty();
 			imageThumbContainer.empty();
 
 			options.each(function(){
@@ -83,10 +82,7 @@
 				}
 			});
 
-			//$('.product-image-thumbs img').first().click();
 		}
-
-		//var colorDropdown = $('#select_22');
 
 		var colorDropdown = getColorDropdown();
 		
@@ -114,6 +110,15 @@
 
 				});
 			});
+
+			colorDropdown.change(function(){
+
+				var optionText = $('option[value=' + $(this).val() + ']',this).text();
+
+				var selector = '.thumb-link[title="' + $.trim(optionText) + '"]';
+
+				$(selector).click();
+			});
 		}
 
 		$('.product-image-thumbs img').each(function(){
@@ -125,27 +130,22 @@
 			}
 		});
 
-		
+		var showBuckleImages = function(buckleImageMap){
+			$('.options-list label').each(function(){
+				var optionLabel = $(this);
+
+				var buckle = buckleImageMap[optionLabel.text()];
+
+				if(buckle){
+					var imagePath = '/images/buckle-images/' + buckle.filename;
+					optionLabel.append('<img src="' + imagePath + '">');
+				}
+				
+			});
+		}
+
+		var buckleResult = $.get('/images/buckle-images/map.json',showBuckleImages);
 
 
-
-		/*var ImageMap = {};
-
-		$('.thumb-link img').each(function(){
-			var img = $(this);
-			var altText = img.attr('alt');
-
-			var imgSrc = img.attr('src');
-
-			var pathArray = imgSrc.split("/");
-
-			var fileName = pathArray[pathArray.length - 1];
-
-			ImageMap[altText] = {
-				"filename":fileName
-			};
-		});
-
-		console.log(JSON.stringify(ImageMap));*/
 	});
 })(jQuery);

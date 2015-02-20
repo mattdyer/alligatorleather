@@ -12,3 +12,11 @@
 	margin: 3px;
 	padding: 3px;
 }
+
+.no-touch .product-belt-buckles .product-image-thumbs a{
+	width:150px;
+}
+
+.options-list label img{
+	width: 150px;
+}
