@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+  <modules>
+    <MADComputing_QuoteViewer>
+      <codePool>community</codePool>
+      <active>true</active>
+    </MADComputing_QuoteViewer>
+  </modules>
+</config>

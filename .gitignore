@@ -2,6 +2,7 @@ magento/app/etc/local.xml
 magento/downloader/cache.cfg
 magento/downloader/connect.cfg
 magento/media/catalog/
+magento/downloader/.cache/
 Thumbs.db
 magento/var/
 sftp-config.json
