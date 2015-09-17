@@ -1,21 +1,19 @@
-Not Used
-
 <?php
-	class Madcomputing_Quoteviewer_QuoteviewerController extends Mage_adminhtml_Controller_Action
+	class Madcomputing_Quoteviewer_QuoteviewerController extends Mage_Adminhtml_Controller_Action
 	{
 		protected function _initAction(){
 			// load layout, set active menu and breadcrumbs
-	        /*$this->loadLayout()
+	        $this->loadLayout()
 	            ->_setActiveMenu('quoteviewer/index')
 	            ->_addBreadcrumb(
-	                  Mage::helper('madcomputing_quoteviewer')->__('Quote Viewer'),
-	                  Mage::helper('madcomputing_quoteviewer')->__('Quote Viewer')
+	                  Mage::helper('quoteviewer')->__('Quote Viewer'),
+	                  Mage::helper('quoteviewer')->__('Quote Viewer')
 	              )
-	        ;*/
-
-	         $this->loadLayout()
-	            ->_setActiveMenu('quoteviewer/index')
 	        ;
+
+	        /* $this->loadLayout()
+	            ->_setActiveMenu('quoteviewer/index');
+	        ;*/
 	        return $this;
 		}
 
@@ -30,11 +28,11 @@ Not Used
 
 		public function gridAction(){
 			$this->loadLayout();
-			$this->renderLayout():
+			$this->renderLayout();
 		}
 
 		protected function _isAllowed(){
-			return Mage::getSingleton('Admin/session')->isAllowed('/quoteviewer/index')
+			return Mage::getSingleton('Admin/session')->isAllowed('/quoteviewer/index');
 		}
 	}
 ?>

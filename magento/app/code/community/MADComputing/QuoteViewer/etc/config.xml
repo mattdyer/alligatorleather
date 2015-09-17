@@ -1,28 +1,37 @@
 <?xml version="1.0"?>
 <config>
   <modules>
-      <MADComputing_QuoteViewer>
+      <Madcomputing_Quoteviewer>
            <version>1.0.0.0.1</version>
-      </MADComputing_QuoteViewer>
+      </Madcomputing_Quoteviewer>
   </modules>
   <global>
     <models>
-        <madcomputing_quoteviewer>
-             <class>MADComputing_QuoteViewer_Model</class>
-        </madcomputing_quoteviewer>
+        <quoteviewer>
+             <class>Madcomputing_Quoteviewer_Model</class>
+        </quoteviewer>
     </models>
     <helpers>
-        <madcomputing_quoteviewer>
-            <class>MADComputing_QuoteViewer_Helper</class>
-        </madcomputing_quoteviewer>
+        <quoteviewer>
+            <class>Madcomputing_Quoteviewer_Helper</class>
+        </quoteviewer>
     </helpers>
   </global>
   <admin>
+    <!--<routers>
+        <quoteviewer>
+            <use>admin</use>
+            <args>
+                <module>MADComputing_QuoteViewer</module>
+                <frontName>quoteviewer</frontName>
+            </args>
+        </quoteviewer>
+    </routers>-->
     <routers>
       <adminhtml>
         <args>
           <modules>
-            <MADComputing_QuoteViewer after="Mage_Adminhtml">MADComputing_QuoteViewer</MADComputing_QuoteViewer>
+            <Madcomputing_Quoteviewer after="Mage_Adminhtml">Madcomputing_Quoteviewer</Madcomputing_Quoteviewer>
           </modules>
         </args>
       </adminhtml>
@@ -35,6 +44,6 @@
           <file>madcomputing_quoteviewer.xml</file>
         </madcomputing_quoteviewer>
       </updates>
-    <layout>
+    </layout>
   </adminhtml>
 </config>

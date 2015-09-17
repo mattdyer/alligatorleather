@@ -93,7 +93,6 @@ class Mage_Reports_Model_Resource_Quote_Collection extends Mage_Sales_Model_Reso
             $this->addFieldToFilter('store_id', array('in' => $storeIds));
         }
 
-
         return $this;
     }
 

@@ -1,5 +1,5 @@
 <?php
-	class MADComputing_QuoteViewer_Block_adminhtml_Grid extends Mage_adminhtml_Block_Widget_Grid{
+	class Madcomputing_Quoteviewer_Block_Adminhtml_Quoteviewer_Grid extends Mage_adminhtml_Block_Widget_Grid{
 		public function __construct()
     {
         parent::__construct();

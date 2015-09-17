@@ -1,30 +1,30 @@
 <?xml version="1.0"?>
 <config>
-    <!--<menu>
-         <quotes translate="title" module="madcomputing_quoteviewer">
+    <menu>
+         <quotes translate="title" module="quoteviewer">
             <title>Quotes</title>
-            <sort_order>65</sort_order>
+            <sort_order>100</sort_order>
             <children>
-                <quoteviewer translate="title" module="madcomputing_quoteviewer">
+                <quoteviewer module="quoteviewer">
                     <title>Quote Viewer</title>
-                    <action>adminhtml/quoteviewer</action>
+                    <action>adminhtml/quoteviewer/</action>
                     <sort_order>50</sort_order>
                 </quoteviewer>
             </children>
          </quotes>
     </menu>
-
-    <acl>
+    <!--<acl>
         <resources>
             <admin>
                 <children>
-                    <quotes translate="title" module="madcomputing_quoteviewer">
+                    <quotes translate="title" module="quoteviewer">
                         <title>Quotes</title>
-                        <sort_order>65</sort_order>
+                        <sort_order>100</sort_order>
                         <children>
-                            <quoteviewer translate="title">
+                            <quoteviewer translate="title" module="quoteviewer">
                                 <title>Quote Viewer</title>
-                                <sort_order>0</sort_order>
+                                <sort_order>50</sort_order>
+                                <action>adminhtml/quoteviewer/index</action>
                             </quoteviewer>
                         </children>
                     </quotes>
