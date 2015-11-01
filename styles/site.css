@@ -20,3 +20,12 @@
 .options-list label img{
 	width: 150px;
 }
+
+.upsmap-container{
+	padding: 20px;
+}
+
+.upsmap-container img{
+	padding:5px;
+	border:1px solid #000;
+}

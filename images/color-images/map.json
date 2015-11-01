@@ -87,10 +87,16 @@
 	"Red, Fire Polished Safari":{
 		"filename":"fire_red.jpg"
 	},
+	"Red, Fire Polished Safari +$50.00":{
+		"filename":"fire_red.jpg"
+	},
 	"Red, Fire Engine Classic":{
 		"filename":"red.jpg"
 	},
 	"Basic White Polished Safari":{
+		"filename":"ermine_white.jpg"
+	},
+	"Basic White Polished Safari +$50.00":{
 		"filename":"ermine_white.jpg"
 	},
 	"Royal Blue Polished Safari":{
