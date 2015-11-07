@@ -130,6 +130,8 @@
 			}
 		});
 
+		//$('.thumb-link').off('click');
+
 		var showBuckleImages = function(buckleImageMap){
 			$('.options-list label').each(function(){
 				var optionLabel = $(this);
