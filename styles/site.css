@@ -1,3 +1,13 @@
+.home-link-image-container{
+	line-height: 150px;
+}
+
+.home-link-image-container img{
+	width:280px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
 .imageLabel{
 	font-size: 10px;
 	text-align: center;
