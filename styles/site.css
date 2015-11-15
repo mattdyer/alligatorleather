@@ -29,6 +29,13 @@
 
 .options-list label img{
 	width: 150px;
+	border:5px solid #f4f4f4;
+	transition:width 1s;
+}
+
+.options-list label img:hover{
+	width: 400px;
+	border-color:#ececec;
 }
 
 .upsmap-container{
@@ -38,4 +45,8 @@
 .upsmap-container img{
 	padding:5px;
 	border:1px solid #000;
+}
+
+.initials-image{
+	width: 100px;
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+  <quoteviewer_adminhtml_quoteviewerbackend_index>
+	<reference name="content">
+	  <block type="quoteviewer/adminhtml_quoteviewerbackend" name="quoteviewerbackend" template="quoteviewer/quoteviewerbackend.phtml"/>
+	</reference>
+  </quoteviewer_adminhtml_quoteviewerbackend_index>
+</layout>

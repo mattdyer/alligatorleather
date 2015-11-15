@@ -1,49 +1,73 @@
 <?xml version="1.0"?>
 <config>
   <modules>
-      <Madcomputing_Quoteviewer>
-           <version>1.0.0.0.1</version>
-      </Madcomputing_Quoteviewer>
+    <MADComputing_QuoteViewer>
+      <version>0.1.0</version>
+    </MADComputing_QuoteViewer>
   </modules>
   <global>
-    <models>
-        <quoteviewer>
-             <class>Madcomputing_Quoteviewer_Model</class>
-        </quoteviewer>
-    </models>
     <helpers>
-        <quoteviewer>
-            <class>Madcomputing_Quoteviewer_Helper</class>
-        </quoteviewer>
+      <quoteviewer>
+        <class>MADComputing_QuoteViewer_Helper</class>
+      </quoteviewer>
     </helpers>
+	<blocks>
+	  <quoteviewer>
+		<class>MADComputing_QuoteViewer_Block</class>
+	  </quoteviewer>
+	</blocks>
   </global>
   <admin>
-    <!--<routers>
-        <quoteviewer>
-            <use>admin</use>
-            <args>
-                <module>MADComputing_QuoteViewer</module>
-                <frontName>quoteviewer</frontName>
-            </args>
-        </quoteviewer>
-    </routers>-->
-    <routers>
-      <adminhtml>
-        <args>
-          <modules>
-            <Madcomputing_Quoteviewer after="Mage_Adminhtml">Madcomputing_Quoteviewer</Madcomputing_Quoteviewer>
-          </modules>
-        </args>
-      </adminhtml>
-    </routers>
+	<routers>
+	  <quoteviewer>
+	    <use>admin</use>
+		<args>
+		  <module>MADComputing_QuoteViewer</module>
+		  <frontName>admin_quoteviewer</frontName>
+		</args>
+	  </quoteviewer>
+	</routers>
   </admin>
   <adminhtml>
-    <layout>
-      <updates>
-        <madcomputing_quoteviewer>
-          <file>madcomputing_quoteviewer.xml</file>
-        </madcomputing_quoteviewer>
-      </updates>
-    </layout>
+	<menu>
+	  <quoteviewer module="quoteviewer">
+		<title>QuoteViewer</title>
+		<sort_order>100</sort_order>
+		<children>
+		  <quoteviewerbackend module="quoteviewer">
+			<title>View Unfinished Quotes</title>
+			<sort_order>0</sort_order>
+			<action>admin_quoteviewer/adminhtml_quoteviewerbackend</action>
+		  </quoteviewerbackend>
+		</children>
+	  </quoteviewer>
+	</menu>
+	<acl>
+	  <resources>
+		<all>
+		  <title>Allow Everything</title>
+		</all>
+		<admin>
+		  <children>
+			<quoteviewer translate="title" module="quoteviewer">
+			  <title>QuoteViewer</title>
+			  <sort_order>1000</sort_order>
+			  <children>
+		  <quoteviewerbackend translate="title">
+			<title>View Unfinished Quotes</title>
+		  </quoteviewerbackend>
+			  </children>
+			</quoteviewer>
+		  </children>
+		</admin>
+	  </resources>
+	</acl>
+	<layout>
+	  <updates>
+		<quoteviewer>
+		  <file>quoteviewer.xml</file>
+		</quoteviewer>
+	  </updates>
+	</layout>
   </adminhtml>
-</config>
+</config> 

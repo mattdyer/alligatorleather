@@ -1,6 +1,19 @@
 (function($){
 	$(function(){
 		
+		var addInitialsImage = function(){
+			var notes = $('.note');
+
+			notes.each(function(){
+				
+				var note = $(this);
+
+				if(note.text() == 'Maximum number of characters: 3'){
+					note.append('<img src="/images/initials.jpg" class="initials-image">');
+				}
+			});
+		}
+		
 		var getColorDropdown = function(){
 			var optionLabels = $('.product-options label');
 
@@ -30,6 +43,8 @@
 
 			imageThumbContainer.empty();
 
+			$('.zoomContainer').remove();
+			
 			options.each(function(){
 				var option = $(this);
 				var colorName = $.trim(option.text());
@@ -148,6 +163,6 @@
 
 		var buckleResult = $.get('/images/buckle-images/map.json',showBuckleImages);
 
-
+		addInitialsImage();
 	});
 })(jQuery);
