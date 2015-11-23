@@ -13,8 +13,21 @@
 	text-align: center;
 }
 
+.thumb-link{
+	position: relative;
+}
+
 .thumb-link img{
 	margin: 0 auto;
+	transition:width 1s;
+}
+
+.thumb-link img:hover {
+    width: 400px;
+    position: absolute;
+    top: -81px;
+    left: 14px;
+    z-index: 1000;
 }
 
 .no-touch .product-image-thumbs a{

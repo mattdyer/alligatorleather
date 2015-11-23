@@ -71,6 +71,12 @@
 					thumb.attr('alt',colorName);
 					thumb.removeAttr('height');
 
+					thumb.on('mouseover',function(){
+						var thumbZoom = thumb.clone();
+						thumbZoom.css('transition','width 1s');
+						
+					});
+
 					var imageLabel = nextImageThumbItem.find('.imageLabel');
 					
 					if(imageLabel.length > 0){
