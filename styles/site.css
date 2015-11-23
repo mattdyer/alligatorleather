@@ -17,6 +17,15 @@
 	margin: 0 auto;
 }
 
+.thumb-zoom{
+	position:absolute;
+	transition:width 1s;
+}
+
+.thumb-zoom:hover{
+	width:400px;
+}
+
 .no-touch .product-image-thumbs a{
 	border-color: #DDD;
 	margin: 3px;

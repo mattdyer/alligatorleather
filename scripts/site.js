@@ -75,16 +75,14 @@
 						var thumbZoom = thumb.clone();
 						thumbZoom.addClass('thumb-zoom');
 						thumbZoom.css({
-							'transition':'width 1s',
-							'position':'absolute',
-							'top':thumb.offset().top + 'px',
-							'left':thumb.offset().left + 'px',
-							'width':'400px'
+							'top':thumb.position().top + 'px',
+							'left':thumb.position().left + 'px'
 						});
 
-						$('body').append(thumbZoom);
+						nextImageThumbItem.append(thumbZoom);
 
-					}).on('mouseleave',function(){
+					});
+					nextImageThumbItem.on('mouseleave',function(){
 						$('.thumb-zoom').remove();
 					});
 
