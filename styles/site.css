@@ -20,6 +20,7 @@
 .thumb-zoom{
 	position:absolute;
 	transition:width 1s;
+	z-index: 1000;
 }
 
 .thumb-zoom:hover{
