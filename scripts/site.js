@@ -76,7 +76,8 @@
 						thumbZoom.addClass('thumb-zoom');
 						thumbZoom.css({
 							'top':thumb.position().top + 'px',
-							'left':thumb.position().left + 'px'
+							'left':thumb.position().left + 'px',
+							'margin-left':thumb.css('margin-left')
 						});
 
 						nextImageThumbItem.append(thumbZoom);
@@ -181,3 +182,16 @@
 		addInitialsImage();
 	});
 })(jQuery);
+
+
+(function(window){
+	var hrefparts = window.location.href.split('/');
+	
+	if(hrefparts[hrefparts.length - 2] == 'onepage'){
+		window.onbeforeunload = function(e) {
+			console.log(e);
+			return 'If you continue, any information you have entered on the checkout page will be lost.';
+		}
+	}
+
+})(window)

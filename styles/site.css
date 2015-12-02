@@ -3,9 +3,18 @@
 }
 
 .home-link-image-container img{
-	width:280px;
+	width:230px;
 	display: inline-block;
 	vertical-align: middle;
+}
+
+.home-link a{
+	font-size: 20px;
+}
+
+.home-link h2{
+	width: 100%;
+	text-align: center;
 }
 
 .imageLabel{
