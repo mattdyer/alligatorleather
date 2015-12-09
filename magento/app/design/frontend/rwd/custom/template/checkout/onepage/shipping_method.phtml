@@ -25,6 +25,12 @@
  */
 ?>
 <form id="co-shipping-method-form" action="">
+    <div class="upsmap-container">
+        <div class="upsmap-explanation">
+            Use this map to determine approximately how long it will take to receive your order using standard ground shipping.
+        </div>
+        <img src="/images/ups_map.gif">
+    </div>
     <div id="checkout-shipping-method-load">
        <!-- Content loaded dynamically -->
     </div>
@@ -43,10 +49,5 @@
             <img src="<?php echo $this->getSkinUrl('images/opc-ajax-loader.gif') ?>" alt="<?php echo $this->__('Loading next step...') ?>" title="<?php echo $this->__('Loading next step...') ?>" class="v-middle" /> <?php echo $this->__('Loading next step...') ?>
         </span>
     </div>
-    <div class="upsmap-container">
-    	<div class="upsmap-explanation">
-            Use this map to determine approximately how long it will take to receive your order using standard ground shipping.
-        </div>
-    	<img src="/images/ups_map.gif">
-	</div>
+    
 </form>
