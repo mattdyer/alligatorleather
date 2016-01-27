@@ -150,6 +150,8 @@
 
 				$(selector).click();
 			});
+		}else{
+			
 		}
 
 		$('.product-image-thumbs img').each(function(){
