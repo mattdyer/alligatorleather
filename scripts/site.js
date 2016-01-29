@@ -229,8 +229,6 @@
 	
 	if(hrefparts[hrefparts.length - 2] == 'onepage'){
 		window.onbeforeunload = function(e) {
-			console.log(e);
-			console.log(checkout);
 			if(checkout.currentStep != 'review' && checkout.currentStep != 'login'){
 				return 'If you continue, any information you have entered on the checkout page will be lost.\n\n If you need to make changes to any information you have entered use the Edit links next to each section.';
 			}
