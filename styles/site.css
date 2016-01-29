@@ -24,6 +24,7 @@
 
 .thumb-link img{
 	margin: 0 auto;
+	height:auto;
 }
 
 .thumb-zoom{
@@ -32,8 +33,23 @@
 	z-index: 1000;
 }
 
+img.thumb-zoom-centered{
+	z-index: 1000;
+	position:absolute;
+	margin-left:15px;
+	margin-top:15px;
+	transition:width 1s, margin-left 1s,margin-top 1s;
+}
+
+
+.thumb-zoom-centered:hover{
+	margin-left:-35px;
+	margin-top:-35px;
+	width:800px;
+}
+
 .thumb-zoom:hover{
-	width:400px;
+	width:800px;
 }
 
 .no-touch .product-image-thumbs a{

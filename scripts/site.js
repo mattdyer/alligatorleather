@@ -151,7 +151,45 @@
 				$(selector).click();
 			});
 		}else{
-			
+			$('.thumb-link').each(function(){
+				
+				var link = $(this);
+				var thumb = $('img',link);
+
+				var imageIndex = link.data('image-index');
+
+				var imageID = 'image-' + imageIndex;
+
+				var fullImage = $('#' + imageID);
+
+				var fullSrc = fullImage.attr('src');
+
+
+				link.on('mouseenter',function(){
+					
+					$('.thumb-zoom-centered').css('z-index',0);
+
+					var thumbZoom = thumb.clone();
+					thumbZoom.attr('src',fullSrc);
+					thumbZoom.addClass('thumb-zoom-centered');
+					thumbZoom.css({
+						'top':(thumb.position().top) + 'px',
+						'left':(thumb.position().left) + 'px'
+					});
+
+					link.append(thumbZoom);
+					
+					link.on('mouseleave',function(){
+						setTimeout(function(){
+							thumbZoom.remove();
+						},900);
+					});
+
+				});
+				
+
+
+			});
 		}
 
 		$('.product-image-thumbs img').each(function(){
