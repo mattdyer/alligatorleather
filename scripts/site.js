@@ -144,11 +144,16 @@
 
 			colorDropdown.change(function(){
 
-				var optionText = $('option[value=' + $(this).val() + ']',this).text();
+				var optionText = $.trim($('option[value=' + $(this).val() + ']',this).text());
 
-				var selector = '.thumb-link[title="' + $.trim(optionText) + '"]';
+				if(imageMap[optionText]){
+					var selectorTitle = imageMap[optionText].displayname || optionText;
+				
 
-				$(selector).click();
+					var selector = '.thumb-link[title="' + selectorTitle + '"]';
+
+					$(selector).click();
+				}
 			});
 		}else{
 			$('.thumb-link').each(function(){

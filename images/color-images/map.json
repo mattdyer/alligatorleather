@@ -107,5 +107,21 @@
 	},
 	"Purple Polished Safari":{
 		"filename":"purple1.jpg"
+	},
+	"Blue, Navy, Red Accent +$25.00":{
+		"filename":"red_on_black_wp.jpg",
+		"displayname":"Blue, Navy, Red Accent"
+	},
+	"Gray, Distressed +$25.00":{
+		"filename":"distressed_gray.jpg",
+		"displayname":"Gray, Distressed"
+	},
+	"Black, Red Accent +$25.00":{
+		"filename":"red_on_black.jpg",
+		"displayname":"Black, Red Accent"
+	},
+	"Brown, Dark Distressed +$25.00":{
+		"filename":"pol_dbrn_dist.jpg",
+		"displayname":"Brown, Dark Distressed"
 	}
 }

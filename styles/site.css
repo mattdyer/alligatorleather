@@ -41,6 +41,9 @@ img.thumb-zoom-centered{
 	transition:width 1s, margin-left 1s,margin-top 1s;
 }
 
+.availability.out-of-stock{
+	display: none;
+}
 
 .thumb-zoom-centered:hover{
 	margin-left:-35px;
