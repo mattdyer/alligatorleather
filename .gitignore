@@ -1,7 +1,10 @@
+db-backup
 magento/app/etc/local.xml
 magento/downloader/cache.cfg
 magento/downloader/connect.cfg
-magento/media/catalog/
+magento/lib/phpqrcode/cache
+magento/media
+magento/media_bak
 magento/downloader/.cache/
 Thumbs.db
 magento/var/

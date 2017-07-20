@@ -12,6 +12,10 @@
 	"Black, Classic":{
 		"filename":"black_classic.jpg"
 	},
+	"Black, Red Accent +$25.00":{
+		"filename":"red_on_black.jpg",
+		"displayname":"Black, Red Accent"
+	},
 	"Brown, Chocolate Safari":{
 		"filename":"choc_brn_safari.jpg"
 	},
@@ -32,6 +36,10 @@
 	},
 	"Brown, Bear Classic":{
 		"filename":"bear_brn.jpg"
+	},
+	"Brown, Dark Distressed +$25.00":{
+		"filename":"pol_dbrn_dist.jpg",
+		"displayname":"Brown, Dark Distressed"
 	},
 	"Peanut, Polished Safari":{
 		"filename":"ppea.jpg"
@@ -115,13 +123,5 @@
 	"Gray, Distressed +$25.00":{
 		"filename":"distressed_gray.jpg",
 		"displayname":"Gray, Distressed"
-	},
-	"Black, Red Accent +$25.00":{
-		"filename":"red_on_black.jpg",
-		"displayname":"Black, Red Accent"
-	},
-	"Brown, Dark Distressed +$25.00":{
-		"filename":"pol_dbrn_dist.jpg",
-		"displayname":"Brown, Dark Distressed"
 	}
 }

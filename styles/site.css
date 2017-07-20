@@ -88,3 +88,12 @@ img.thumb-zoom-centered{
 .initials-image{
 	width: 100px;
 }
+
+.checkout-onepage-success .print_order_link{
+	border: 1px solid #CCC;
+    padding: 5px;
+    border-radius: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #EFEFEF;
+}
