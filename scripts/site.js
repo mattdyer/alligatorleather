@@ -54,9 +54,20 @@
 					if(color.displayname){
 						colorName = color.displayname;
 					}
+
+					fileName = color.filename
+
+					if(color.product_selectors){
+						$.each(color.product_selectors,function(selector,imageName){
+							if(imageThumbContainer.parents(selector).length){
+								fileName = imageName;
+							}
+						});
+					}
+
 					var nextImageThumbItem = imageThumbItem.clone();
 
-					var imageSrc = '/images/color-images/' + color.filename;
+					var imageSrc = '/images/color-images/' + fileName;
 
 					var thumbLink = nextImageThumbItem.find('.thumb-link');
 

@@ -10,11 +10,18 @@
 		"filename":"PBS.jpg"
 	},
 	"Black, Classic":{
-		"filename":"black_classic.jpg"
+		"filename":"black_classic.jpg",
+		"product_selectors":{
+			".category-alligator-golf-belts":"black_classic_golf.jpg"
+		}
 	},
 	"Black, Red Accent +$25.00":{
 		"filename":"red_on_black.jpg",
 		"displayname":"Black, Red Accent"
+	},
+	"Black, Gray Accent +$25.00":{
+		"filename":"black_gray_accent.jpg",
+		"displayname":"Black, Gray Accent"
 	},
 	"Brown, Chocolate Safari":{
 		"filename":"choc_brn_safari.jpg"
@@ -107,8 +114,12 @@
 	"Basic White Polished Safari +$50.00":{
 		"filename":"ermine_white.jpg"
 	},
-	"Royal Blue Polished Safari":{
+	"Blue, Royal Polished Safari":{
 		"filename":"royalblue_ps.jpg"
+	},
+	"Blue, Navy Distressed +$25.00":{
+		"filename":"blue_navy_distressed.jpg",
+		"displayname":"Blue, Navy Distressed"
 	},
 	"Pink Polished Safari":{
 		"filename":"pink.jpg"
