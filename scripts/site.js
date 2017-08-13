@@ -133,7 +133,7 @@
 			var options = $('option',colorDropdown);
 			var imageMap;
 
-			$.get('/images/color-images/map.json',function(data){
+			$.get('/images/color-images/map.json?v2',function(data){
 				imageMap = data;
 				makeImagesFromOptions(options);
 			});

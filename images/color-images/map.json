@@ -49,13 +49,17 @@
 		"displayname":"Brown, Dark Distressed"
 	},
 	"Peanut, Polished Safari":{
-		"filename":"ppea.jpg"
+		"filename":"peanut_polished_safari.jpg"
 	},
 	"Peanut, Classic":{
 		"filename":"dark_peanut_cl.jpg"
 	},
 	"Peanut, Light Classic":{
 		"filename":"lt_peanut_cl.jpg"
+	},
+	"Peanut, Distressed +$25.00":{
+		"filename":"peanut_distressed.jpg",
+		"displayname":"Peanut, Distressed"
 	},
 	"Fawn Safari":{
 		"filename":"fawn_safari.jpg"
