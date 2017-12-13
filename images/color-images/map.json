@@ -1,13 +1,13 @@
 {
 	"Black, Polished Safari":{
-		"filename":"black_safari.jpg"
+		"filename":"black_polished_safari.jpg"
 	},
 	"Black, Distressed +$25.00":{
 		"filename":"distressed_black.jpg",
 		"displayname":"Black, Distressed"
 	},
 	"Black, Safari":{
-		"filename":"PBS.jpg"
+		"filename":"black_safari_new.jpg"
 	},
 	"Black, Classic":{
 		"filename":"black_classic.jpg",
@@ -24,7 +24,7 @@
 		"displayname":"Black, Gray Accent"
 	},
 	"Brown, Chocolate Safari":{
-		"filename":"choc_brn_safari.jpg"
+		"filename":"brown_chocolate_safari.jpg"
 	},
 	"Brown, Dark Chocolate Safari":{
 		"filename":"dark_chocolate_safari.jpg"
@@ -55,23 +55,23 @@
 		"filename":"dark_peanut_cl.jpg"
 	},
 	"Peanut, Light Classic":{
-		"filename":"lt_peanut_cl.jpg"
+		"filename":"peanut_light_classic.jpg"
 	},
 	"Peanut, Distressed +$25.00":{
 		"filename":"peanut_distressed.jpg",
 		"displayname":"Peanut, Distressed"
 	},
 	"Fawn Safari":{
-		"filename":"fawn_safari.jpg"
+		"filename":"fawn_safari_new.jpg"
 	},
 	"Kangaroo Safari":{
 		"filename":"kangaroo_safari.jpg"
 	},
 	"Light Mahogany Safari":{
-		"filename":"ltmahogany.jpg"
+		"filename":"brown_light_mahogany_safari.jpg"
 	},
 	"Burgundy Polished Safari":{
-		"filename":"PBURGUNDY.jpg"
+		"filename":"burgundy_polished_safari.jpg"
 	},
 	"Burgundy Classic":{
 		"filename":"burgundy.jpg"
