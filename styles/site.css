@@ -97,3 +97,11 @@ img.thumb-zoom-centered{
     text-transform: uppercase;
     background-color: #EFEFEF;
 }
+
+#search_mini_form{
+	display:none;
+}
+
+a[title="Advanced Search"]{
+	display:none;
+}

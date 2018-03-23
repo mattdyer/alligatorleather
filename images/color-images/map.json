@@ -23,6 +23,14 @@
 		"filename":"black_gray_accent.jpg",
 		"displayname":"Black, Gray Accent"
 	},
+	"Black, Royal Accent +$25.00":{
+		"filename":"black_royal_accent.jpg",
+		"displayname":"Black, Royal Accent"
+	},
+	"Black, Royal Accent +$50.00":{
+		"filename":"black_royal_accent.jpg",
+		"displayname":"Black, Royal Accent"
+	},
 	"Brown, Chocolate Safari":{
 		"filename":"brown_chocolate_safari.jpg"
 	},
@@ -107,7 +115,8 @@
 		"filename":"fire_red.jpg"
 	},
 	"Red, Fire Polished Safari +$50.00":{
-		"filename":"fire_red.jpg"
+		"filename":"fire_red.jpg",
+		"displayname":"Red, Fire Polished Safari"
 	},
 	"Red, Fire Engine Classic":{
 		"filename":"red.jpg"
@@ -116,7 +125,8 @@
 		"filename":"ermine_white.jpg"
 	},
 	"Basic White Polished Safari +$50.00":{
-		"filename":"ermine_white.jpg"
+		"filename":"ermine_white.jpg",
+		"displayname":"Basic White Polished Safari"
 	},
 	"Blue, Royal Polished Safari":{
 		"filename":"royalblue_ps.jpg"
@@ -129,7 +139,11 @@
 		"filename":"pink.jpg"
 	},
 	"Purple Polished Safari":{
-		"filename":"purple1.jpg"
+		"filename":"purple_polished_safari.jpg"
+	},
+	"Purple Polished Safari +$50.00":{
+		"filename":"purple_polished_safari.jpg",
+		"displayname":"Purple Polished Safari"
 	},
 	"Blue, Navy, Red Accent +$25.00":{
 		"filename":"red_on_black_wp.jpg",
