@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+	<global>
+		<blocks>
+			<madcomputing_removeshipping>
+				<class>MADComputing_RemoveShipping_Blocks</class>
+			</madcomputing_removeshipping>
+			<checkout>
+				<rewrite>
+					<onepage>MADComputing_RemoveShipping_Blocks_Checkout_Onepage</onepage>
+				</rewrite>
+			</checkout>
+		</blocks>
+	</global>
+	<frontend>
+		<layout>
+			<updates>
+				<madcomputing_removeshipping>
+					<file>madcomputing/checkout.xml</file>
+				</madcomputing_removeshipping>
+			</updates>
+		</layout>
+		<routers>
+			<checkout>
+				<args>
+					<modules>
+						<madcomputing_removeshipping before="Mage_Checkout">MADComputing_RemoveShipping</madcomputing_removeshipping>
+					</modules>
+				</args>
+			</checkout>
+		</routers>
+	</frontend>
+</config>
