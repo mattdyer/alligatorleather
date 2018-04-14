@@ -105,3 +105,13 @@ img.thumb-zoom-centered{
 a[title="Advanced Search"]{
 	display:none;
 }
+
+.shipping-billing-message{
+	border: 1px solid #CCC;
+    background-color: #eefaee;
+    padding: 8px 15px;
+    font-size: 12px;
+    margin: 16px 0;
+    line-height: 21px;
+    color: #777;
+}
