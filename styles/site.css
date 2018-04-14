@@ -85,6 +85,16 @@ img.thumb-zoom-centered{
 	border:1px solid #000;
 }
 
+.upsmap-explanation{
+	border: 1px solid #CCC;
+    background-color: #eefaee;
+    padding: 8px 15px;
+    font-size: 12px;
+    margin: 16px 0;
+    line-height: 21px;
+    color: #777;
+}
+
 .initials-image{
 	width: 100px;
 }
