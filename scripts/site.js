@@ -233,7 +233,7 @@
 			});
 		}
 
-		var buckleResult = $.get('/images/buckle-images/map.json',showBuckleImages);
+		var buckleResult = $.get('/images/buckle-images/map.json?v2',showBuckleImages);
 
 		addInitialsImage();
 	});

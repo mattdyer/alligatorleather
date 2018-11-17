@@ -152,5 +152,9 @@
 	"Gray, Distressed +$25.00":{
 		"filename":"distressed_gray.jpg",
 		"displayname":"Gray, Distressed"
+	},
+	"Blue, Royal Polished Safari, Distressed +$25.00":{
+		"filename":"blue_royal_dist.jpg",
+		"displayname":"Blue, Royal Polished Safari, Distressed"
 	}
 }
