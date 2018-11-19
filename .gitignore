@@ -7,5 +7,6 @@ magento/media
 magento/media_bak
 magento/downloader/.cache/
 Thumbs.db
+.DS_Store
 magento/var/
 sftp-config.json

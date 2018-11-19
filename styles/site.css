@@ -128,8 +128,10 @@ a[title="Advanced Search"]{
 
 .gift-card-link{
 	float: left;
-    margin-left: 140px;
-    padding: 20px;
+    font-size: 18px;
+    margin-left: 110px;
+    margin-right: 215px;
+    padding: 8px 22px;
     text-transform: uppercase;
     font-weight: bold;
     background-color: #CCCCCC;
@@ -137,6 +139,12 @@ a[title="Advanced Search"]{
     border-bottom: 1px solid #666666;
     border-right: 1px solid #666666;
     text-shadow: 1px 2px rgb(255,255,255,0.5);
+}
+
+.gift-card-link:hover{
+	text-decoration: none;
+	border-bottom: 2px solid #666666;
+    border-right: 2px solid #666666;
 }
 
 .gift-card-link span{
