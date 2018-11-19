@@ -233,9 +233,36 @@
 			});
 		}
 
+		var setupGiftCardPriceRange = function(){
+
+			var priceDropdown = $('.gift-card-select');
+
+			var options = $('option',priceDropdown);
+
+			var values = [];
+
+			$.each(options,function(index,option){
+				var optionValue = parseInt($(option).text().split('$').join(''),10);
+				if(!isNaN(optionValue)){
+					values.push(optionValue);
+				}
+			});
+
+			var maxValue = Math.max.apply({},values);
+			var minValue = Math.min.apply({},values);
+
+			$('.product-gift-card .regular-price').append('<span class="price-range">$' + minValue + ' - $' + maxValue + '</span>');
+		}
+
 		var buckleResult = $.get('/images/buckle-images/map.json?v2',showBuckleImages);
 
 		addInitialsImage();
+
+		setupGiftCardPriceRange();
+
+		
+
+
 	});
 })(jQuery);
 

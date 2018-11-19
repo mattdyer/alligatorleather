@@ -152,11 +152,22 @@ a[title="Advanced Search"]{
     font-weight: bold;
     color: #FF0000;
     position: relative;
-    bottom: 5px;
+    bottom: 7px;
     background-color: #ffaaaa;
-    padding: 4px;
+    padding: 1px 5px;
     border-radius: 5px;
     border: 1px solid #FF0000;
     margin-left: 5px;
     text-shadow: none;
+    display: inline-block;
+    transform: rotate(-23deg);
+}
+
+.product-gift-card .regular-price .price{
+	display:none;
+}
+
+.product-gift-card .regular-price .price-range{
+	color: #8DAD2A;
+    font-size: 24px;
 }
