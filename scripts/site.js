@@ -15,7 +15,8 @@
 		}
 		
 		var getColorDropdown = function(){
-			var optionLabels = $('.product-options label');
+			
+			/*var optionLabels = $('.product-options label');
 
 			var colorDropdown;
 			var colorLabel;
@@ -29,8 +30,33 @@
 
 			if(colorLabel){
 				colorDropdown = colorLabel.parent().next().find('select');
+			}*/
+
+			return getOptionDropdown('Color / Finish');
+		}
+
+		var getSizeDropdown = function(){
+			
+			return getOptionDropdown('Size');
+		}
+
+		var getOptionDropdown = function(labelText){
+			var optionLabels = $('.product-options label');
+
+			var Dropdown;
+			var Label;
+
+			optionLabels.each(function(){
+				if($(this).text().match(new RegExp(labelText))){
+					Label = $(this);
+					return false;
+				}
+			});
+
+			if(Label){
+				Dropdown = Label.parent().next().find('select');
 			}
-			return colorDropdown;
+			return Dropdown;
 		}
 
 		var makeImagesFromOptions = function(options){
@@ -133,7 +159,7 @@
 			var options = $('option',colorDropdown);
 			var imageMap;
 
-			$.get('/images/color-images/map.json?v2',function(data){
+			$.get('/images/color-images/map.json?v3',function(data){
 				imageMap = data;
 				makeImagesFromOptions(options);
 			});
@@ -155,7 +181,7 @@
 
 			colorDropdown.change(function(){
 
-				var optionText = $.trim($('option[value=' + $(this).val() + ']',this).text());
+				var optionText = getSelectedOptionText($(this));
 
 				if(imageMap[optionText]){
 					var selectorTitle = imageMap[optionText].displayname || optionText;
@@ -219,6 +245,17 @@
 
 		//$('.thumb-link').off('click');
 
+		var getSelectedOptionText = function(dropdown){
+
+			var optionText = '';
+
+			if(dropdown.val().length > 0){
+				optionText = $.trim($('option[value=' + dropdown.val() + ']',dropdown).text());
+			}
+
+			return optionText;
+		}
+
 		var showBuckleImages = function(buckleImageMap){
 			$('.options-list label').each(function(){
 				var optionLabel = $(this);
@@ -254,13 +291,60 @@
 			$('.product-gift-card .regular-price').append('<span class="price-range">$' + minValue + ' - $' + maxValue + '</span>');
 		}
 
+
+		var checkOptionCombination = function(e){
+			
+			var currentDropDown = $(this);
+
+			var sizeDropdown = getSizeDropdown();
+			var colorDrowdown = getColorDropdown();
+
+			var colorText = getSelectedOptionText(colorDropdown);
+			var sizeText = getSelectedOptionText(sizeDropdown);
+
+			var message = $('<div>' + colorText + ' In size ' + sizeText + ' is Discontinued and Out of Stock</div>');
+
+			console.log(colorText);
+
+			var invalidCombinations = {
+				'Brown, Dark Classic' : ['38"','40"']
+			};
+
+			if(invalidCombinations[colorText]){
+				if(invalidCombinations[colorText].indexOf(sizeText) >= 0){
+					console.log(sizeText);
+					currentDropDown.val('');
+					currentDropDown.after(message);
+
+					setTimeout(function(){
+						message.fadeOut(1000,function(){
+							message.remove();
+						});
+					},3000);
+
+				}
+			}
+
+		}
+
+
+		var disableOutOfStockOptionCombinations = function(){
+			var sizeDropdown = getSizeDropdown();
+			var colorDrowdown = getColorDropdown();
+
+			sizeDropdown.on('change',checkOptionCombination);
+			colorDropdown.on('change',checkOptionCombination);
+
+		}
+
+
 		var buckleResult = $.get('/images/buckle-images/map.json?v2',showBuckleImages);
 
 		addInitialsImage();
 
 		setupGiftCardPriceRange();
 
-		
+		disableOutOfStockOptionCombinations();
 
 
 	});
