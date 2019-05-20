@@ -138,6 +138,10 @@
 	"Pink Polished Safari":{
 		"filename":"pink.jpg"
 	},
+	"Pink Polished Safari +$50.00":{
+		"filename":"pink.jpg",
+		"displayname":"Pink Polished Safari"
+	},
 	"Purple Polished Safari":{
 		"filename":"purple_polished_safari.jpg"
 	},
